@@ -98,12 +98,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let leftTime = 10;
 
-    // timerRadio.forEach((item, i) => {
-    //     item.addEventListener('click', () => {
-    //         setTime(i);
-    //     });
-    // });
-
     timerStartButton.addEventListener('click', () => {
         timerRadio.forEach((item,i)=>{
             if(item.checked){
