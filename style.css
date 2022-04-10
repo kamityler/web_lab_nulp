@@ -47,3 +47,10 @@ img{
     margin-top: -17px;
     height:"30px"; width:"30px";
 }
+
+.border-red{
+    border:solid 5px red;
+}
+.border-green{
+    border:solid 5px green;
+}

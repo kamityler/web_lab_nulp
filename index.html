@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div style="float:left;margin: 60px;">
+    <div id="board-block" style="float:left;margin: 60px;">
         <table class="chess-board">
             <tbody>
                 <tr>
@@ -142,6 +142,21 @@
         <br>
         <a href="https://www.chess.com/puzzles/problem/491418">Task</a>
     </div>
+
+    <div style="float:left; margin: 60px;">
+        <div class="timer-block border-red" style="padding: 10px;margin:10px; text-align: center;">
+            <span id="minutes">10</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+        <label><input class="timer-radio" id="10min-radio" name="timer-radio" type="radio" checked="checked">10хв</label>
+        <label><input class="timer-radio" id="30min-radio" name="timer-radio" type="radio">30хв</label>
+        <label><input class="timer-radio" id="60min-radio" name="timer-radio" type="radio">60хв</label>
+        <br>
+        <button id="timer-start-button">Старт</button>
+        <button id="timer-reset-button">На нуль</button>
+    </div>
+
     <div style="float:right;border:solid 2px green;padding: 10px;margin:60px; width: 400px; margin-right: 300px;">
         <form action="action.html" method="GET" enctype="multipart/form-data">
             <h1>Зареєструватись або ввійти</h1>
