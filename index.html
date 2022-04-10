@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="float:left;margin: 60px;">
+        <table class="chess-board">
+            <tbody>
+                <tr>
+                    <td class="light">
+                        <div class="numeric-font numeric-pos">8</div>
+                    </td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <td class="dark">
+                        <div class="numeric-font numeric-pos">7</div>
+                    </td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                </tr>
+                <tr>
+                    <td class="light">
+                        <div class="numeric-font numeric-pos">6</div>
+                    </td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bp.png"
+                            height="28px" width="28px" /></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <td class="dark">
+                        <div class="numeric-font numeric-pos">5</div>
+                    </td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bp.png"
+                            height="30px" width="30px" /></td>
+                </tr>
+                <tr>
+                    <td class="light">
+                        <div class="numeric-font numeric-pos">4</div>
+                    </td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/wk.png"
+                            height="30px" width="30px" /></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <td class="dark">
+                        <div class="numeric-font numeric-pos">3</div>
+                    </td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/wp.png"
+                            height="30px" width="30px" /></td>
+                    <td class="dark"></td>
+                    <td class="light"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bk.png"
+                            height="30px" width="30px" /></td>
+                </tr>
+                <tr>
+                    <td class="light">
+                        <div class="numeric-font numeric-pos">2</div>
+                        <img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bk.png" height="30px"
+                            width="30px" />
+                    </td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <td class="dark">
+                        <p class="numeric-font numeric-pos">1</p>
+                        <div class="numeric-font letter-pos">a</div>
+                        <img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bk.png" height="30px"
+                            width="30px" />
+                    </td>
+                    <td class="light">
+                        <div class="numeric-font letter-pos"> b</div>
+                    </td>
+                    <td class="dark">
+                        <div class="numeric-font letter-pos">c</div>
+
+                    </td>
+                    <td class="light">
+                        <div class="numeric-font letter-pos">d</div>
+                    </td>
+                    <td class="dark">
+                        <div class="numeric-font letter-pos">e</div>
+                    </td>
+                    <td class="light">
+                        <div class="numeric-font letter-pos">f</div>
+                    </td>
+                    <td class="dark">
+                        <div class="numeric-font letter-pos">g</div>
+                    </td>
+                    <td class="light">
+                        <div class="numeric-font letter-pos">h</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br>
+        <a href="https://www.chess.com/articles">Rules</a>
+        <br>
+        <a href="https://www.chess.com/puzzles/problem/491418">Task</a>
+    </div>
+    <div style="float:right;border:solid 2px green;padding: 10px;margin:60px; width: 400px; margin-right: 300px;">
+        <form action="action.html" method="GET" enctype="multipart/form-data">
+            <h1>Зареєструватись або ввійти</h1>
+            <label for="user-email">Email:</label>
+            <input type="email" placeholder="Email" id="user-email" name="user-email" minlength="3">
+            <hr>
+            <label for="user-number">Номер телефону:</label>
+            <input type="number" id="user-number" name="user-number" placeholder="+380-98-765-43-21" style="width:200px"
+                mахlength="9">
+            <hr>
+            <label style="float:left" for="user-pass">Пароль: </label>
+            <input type="checkbox" id="pass-vis" style="float:right">
+            <div class="user-pass">
+                <input type="password" placeholder="Пароль" class="user-pass" id="user-pass" name="user-pass"
+                    minlength="8">
+            </div>
+            <br>
+            <div id="user-pass-label">
+                <label style="float:left;" for="user-pass">Повторити: </label>
+            </div>
+            <input type="password" placeholder="Пароль" class="user-pass" name="user-pass" minlength="8">
+            <hr>
+            <label for="user-age">Вкажіть свій вік:</label>
+            <input id="user-age" type="range" name="user-age" min="3" max="199" step="1" value="18">
+            <text id="current-age">18</text>
+            <hr>
+            <label for="user-avatar">Виберіть фото</label>
+            <input type="file" id="user-file" name="user-file">
+            <hr>
+            <label for="user-continent">Місце проживання</label>
+            <select id="user-continent" name="user-continent">
+                <option value="none" selected hidden>Вибрати</option>
+                <option value="africa">Африка</option>
+                <option value="asia">Азія</option>
+                <option value="europe">Європа</option>
+                <option value="north-america">Північна Америка</option>
+                <option value="south-america">Південна Америка</option>
+            </select>
+            <hr>
+            <span>Вкажіть ваші навики гри у шахи:</span>
+            <br>
+            <label><input type="radio" name="user-level" id="newbie" value="newbie" checked="checked">Новачок</label>
+            <label><input type="radio" name="user-level" id="medium" value="medium">Любитель</label>
+            <label><input type="radio" name="user-level" id="advanced" value="advanced">Професіонал</label>
+            <hr>
+            <span>Режими гри:</span><br>
+            <label><input type="checkbox" name="user-mode" id="user-mode-bot" value="bot" checked="checked">Бот</label>
+            <label><input type="checkbox" name="user-mode" id="user-mode-mult" value="mult">Мультиплеєр</label>
+            <label><input type="checkbox" name="user-mode" id="user-mode-one" value="one">Один на один</label>
+            <hr>
+            <label for="user-bio">Розкажіть про себе</label>
+            <textarea id="user-bio" placeholder="Біо" name="user-bio" rows="2" cols="50"></textarea>
+            <hr>
+            <input type="hidden" name="hidden" value="hidden info">
+            <section class="submission">
+                <button type="reset" id="button-reset">Reset</button>
+                <button type="submit" id="button-submit">Submit</button>
+            </section>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
