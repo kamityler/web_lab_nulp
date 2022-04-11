@@ -77,6 +77,39 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    //form checkbox 
+    {
+        const userMode = document.querySelectorAll(".user-mode-checkbox");
+
+        document.querySelector("#button-submit").addEventListener("mouseover", () => {
+                        console.log(userMode);
+            let flag = false;
+            userMode.forEach((item,i) => {
+                if (item.checked) {
+                    flag = true;
+                }
+            });
+            if (!flag) {
+                document.querySelector("#checkbox-error").innerHTML = `Оберіть режим гри!!!`;
+                
+            } else {
+                document.querySelector("#checkbox-error").innerHTML = ``;
+
+            }
+        });
+
+        userMode.forEach((item,i)=>{
+            item.addEventListener('click',()=>{
+                if(item.checked){
+                    document.querySelector("#checkbox-error").innerHTML = ``;
+                }
+            });
+
+
+        });
+
+    }
+
     //reset button
     {
         const resetButton = document.querySelector("#button-reset"),
@@ -99,8 +132,8 @@ window.addEventListener("DOMContentLoaded", () => {
     let leftTime = 10;
 
     timerStartButton.addEventListener('click', () => {
-        timerRadio.forEach((item,i)=>{
-            if(item.checked){
+        timerRadio.forEach((item, i) => {
+            if (item.checked) {
                 setTime(i);
             }
         });
@@ -113,15 +146,20 @@ window.addEventListener("DOMContentLoaded", () => {
     timerResetButton.addEventListener('click', () => {
         changeClass(timerBox, 'border-green', 'border-red');
         leftTime = 1;
+        setTimeout(()=>{
+            timerText[2].innerHTML = `00`;
+        },100);
+        
     });
 
     function gameTimer() {
-        const timer = setInterval(updateTimer, 1000);
+        const timer = setInterval(updateTimer, 100);
         if (leftTime <= 0) {
             changeClass(timerBox, 'border-green', 'border-red');
             clearInterval(timer);
         }
         leftTime *= 60;
+
         function updateTimer() {
             leftTime -= 1;
             timerText[0].innerHTML = parseInt(leftTime / 60);
@@ -163,6 +201,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
         timerText[0].innerHTML = leftTime;
     }
+
 
 
 });

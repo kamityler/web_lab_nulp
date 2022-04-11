@@ -30,7 +30,7 @@
 
 .numeric-pos {
     position: fixed;
-    margin-left:0px;
+    margin-left: 0px;
     margin-top: -17px;
 }
 
@@ -42,15 +42,22 @@
     position: fixed; */
 }
 
-img{
-    position:absolute;
+img {
+    position: absolute;
     margin-top: -17px;
-    height:"30px"; width:"30px";
+    height: "30px";
+    width: "30px";
 }
 
-.border-red{
-    border:solid 5px red;
+.border-red {
+    border: solid 5px red;
 }
-.border-green{
-    border:solid 5px green;
+
+.border-green {
+    border: solid 5px green;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
 }
