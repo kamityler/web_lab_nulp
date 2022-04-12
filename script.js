@@ -82,25 +82,25 @@ window.addEventListener("DOMContentLoaded", () => {
         const userMode = document.querySelectorAll(".user-mode-checkbox");
 
         document.querySelector("#button-submit").addEventListener("mouseover", () => {
-                        console.log(userMode);
+            console.log(userMode);
             let flag = false;
-            userMode.forEach((item,i) => {
+            userMode.forEach((item, i) => {
                 if (item.checked) {
                     flag = true;
                 }
             });
             if (!flag) {
                 document.querySelector("#checkbox-error").innerHTML = `Оберіть режим гри!!!`;
-                
+
             } else {
                 document.querySelector("#checkbox-error").innerHTML = ``;
 
             }
         });
 
-        userMode.forEach((item,i)=>{
-            item.addEventListener('click',()=>{
-                if(item.checked){
+        userMode.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                if (item.checked) {
                     document.querySelector("#checkbox-error").innerHTML = ``;
                 }
             });
@@ -119,6 +119,18 @@ window.addEventListener("DOMContentLoaded", () => {
             labelDiv.innerHTML = `
     <label style="float:left;" for="user-pass" >Повторити: </label>
     `;
+        });
+    }
+
+    //submit button
+    {
+        document.querySelector("#button-submit").addEventListener("click", () => {
+            const hiddenInput = document.querySelector("#hidden-input");
+            const currentDate = new Date(),
+             cDay = currentDate.getDate(),
+             cMonth = currentDate.getMonth() + 1,
+             cYear = currentDate.getFullYear();
+            hiddenInput.value = `${cDay}-${cMonth}-${cYear}`;
         });
     }
 
@@ -146,10 +158,10 @@ window.addEventListener("DOMContentLoaded", () => {
     timerResetButton.addEventListener('click', () => {
         changeClass(timerBox, 'border-green', 'border-red');
         leftTime = 1;
-        setTimeout(()=>{
+        setTimeout(() => {
             timerText[2].innerHTML = `00`;
-        },100);
-        
+        }, 100);
+
     });
 
     function gameTimer() {
