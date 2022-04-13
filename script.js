@@ -17,9 +17,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     //password visibility
     {
-        const passBox = document.querySelector(".user-pass"),
-            checkBox = document.querySelector("#pass-vis");
-        checkBox.addEventListener('click', () => {
+        document.querySelector("#pass-vis").addEventListener('click', () => {
+            const password = document.querySelector("#user-pass"),
+                type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            /*
             const password = passBox.querySelector("#user-pass").value;
             if (checkBox.checked) {
                 passBox.innerHTML = `<input type="text" required placeholder="Пароль" id="user-pass" name="user-pass">`;
@@ -29,6 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 placeholder="Пароль" id="user-pass" name="user-pass">`;
                 passBox.querySelector("#user-pass").value = password;
             }
+            */
         });
     }
 
@@ -127,9 +130,9 @@ window.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#button-submit").addEventListener("click", () => {
             const hiddenInput = document.querySelector("#hidden-input");
             const currentDate = new Date(),
-             cDay = currentDate.getDate(),
-             cMonth = currentDate.getMonth() + 1,
-             cYear = currentDate.getFullYear();
+                cDay = currentDate.getDate(),
+                cMonth = currentDate.getMonth() + 1,
+                cYear = currentDate.getFullYear();
             hiddenInput.value = `${cDay}-${cMonth}-${cYear}`;
         });
     }
