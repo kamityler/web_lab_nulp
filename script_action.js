@@ -7,3 +7,4 @@ window.addEventListener("DOMContentLoaded", () => {
         list.append(document.createElement(`br`));
     });
 });
+

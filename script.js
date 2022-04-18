@@ -217,6 +217,25 @@ window.addEventListener("DOMContentLoaded", () => {
         timerText[0].innerHTML = leftTime;
     }
 
-
-
+    //chart
+    {
+        const pawns = document.querySelectorAll("#pawn").length,
+            bishops = document.querySelectorAll("#bishop").length,
+            knights = document.querySelectorAll("#knight").length,
+            rooks = document.querySelectorAll("#rook").length,
+            queens = document.querySelectorAll("#queen").length,
+            kings = document.querySelectorAll("#king").length;
+        let myChart = document.getElementById("my-chart").getContext('2d');
+        let chessChart = new Chart(myChart, {
+            type: 'bar',
+            data: {
+                labels: ['Pawns', 'Bishops', 'Knights', 'Rooks', 'Queens', 'Kings'],
+                datasets: [{
+                    label: 'Amount',
+                    data: [pawns, bishops, knights, rooks, queens, kings]
+                }]
+            },
+            options: {}
+        });
+    }
 });
