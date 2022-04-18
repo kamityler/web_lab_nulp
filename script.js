@@ -232,7 +232,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 labels: ['Pawns', 'Bishops', 'Knights', 'Rooks', 'Queens', 'Kings'],
                 datasets: [{
                     label: 'Amount',
-                    data: [pawns, bishops, knights, rooks, queens, kings]
+                    //data: [pawns, bishops, knights, rooks, queens, kings],
+                    data: [pawns, 3, 2, 1, 5, kings],
+                    backgroundColor: ['red', 'orange','yellow','green', 'blue', 'purple']
                 }]
             },
             options: {}

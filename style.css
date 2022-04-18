@@ -29,14 +29,14 @@
 }
 
 .numeric-pos {
-    position: fixed;
+    position: relative;
     margin-left: 0px;
     margin-top: -17px;
 }
 
 .letter-pos {
-    position: fixed;
-    margin-top: 1px;
+    position: relative;
+    margin-top: 15px;
     margin-left: 22px;
     /* position:absolute;
     position: fixed; */
@@ -60,4 +60,9 @@ img {
 .error-message {
     color: red;
     font-style: italic;
+}
+
+.container{
+    max-height: 5%;
+    height: 5%;
 }
