@@ -1,3 +1,11 @@
+body{
+    background-color: #312E2B;
+}
+
+p{
+    color:#FFFFFFA6;
+}
+
 .chess-board {
     border-spacing: 0;
     border-collapse: collapse;
@@ -9,35 +17,42 @@
 
 .chess-board td {
     border: 0px solid;
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
 }
 
 .chess-board .light {
-    background: rgb(243, 238, 190);
+    background: rgb(238, 238, 210);
 }
 
 .chess-board .dark {
-    background: rgb(134, 243, 9);
+    background: rgb(118, 150, 86);
 }
 
 .numeric-font {
     cursor: default;
     font-size: 14px;
     position: absolute;
-    color: grey;
+}
+
+.dark-font{
+    color: rgb(118, 150, 86);
+}
+
+.light-font{
+    color: rgb(238, 238, 210);
 }
 
 .numeric-pos {
     position: relative;
     margin-left: 0px;
-    margin-top: -17px;
+    margin-top: -50%;
 }
 
 .letter-pos {
     position: relative;
-    margin-top: 15px;
-    margin-left: 22px;
+    margin-top: 65%;
+    margin-left: 83%;
     /* position:absolute;
     position: fixed; */
 }
@@ -45,8 +60,8 @@
 img {
     position: absolute;
     margin-top: -17px;
-    height: "30px";
-    width: "30px";
+    height: 6%;
+    width: 3%;
 }
 
 .border-red {
