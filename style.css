@@ -118,5 +118,30 @@ img {
     border: solid 1px red;
     background-color: grey;
     float:left;
+    color: wheat;
+}
+
+.radius-border{
+    border-radius: 20px;
+}
+
+.reject-button{
+    color:antiquewhite;
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+    width: 80px;
+    height:25px;
     
 }
+
+.accept-button{
+    color:antiquewhite;
+    border: none;
+    background-color: green;
+    border-radius: 5px;
+    width: 80px;
+    height:25px;
+}
+
+

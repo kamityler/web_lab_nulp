@@ -134,6 +134,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 cMonth = currentDate.getMonth() + 1,
                 cYear = currentDate.getFullYear();
             hiddenInput.value = `${cDay}-${cMonth}-${cYear}`;
+
+            const userMode = document.querySelectorAll(".user-mode-checkbox");
+            //document.querySelector("form").submit();
         });
     }
 
@@ -147,16 +150,26 @@ window.addEventListener("DOMContentLoaded", () => {
     let leftTime = 10;
 
     timerStartButton.addEventListener('click', () => {
-        timerRadio.forEach((item, i) => {
-            if (item.checked) {
-                setTime(i);
-            }
-        });
+        timersetidksal();
         if (leftTime > 1) {
             changeClass(timerBox, 'border-red', 'border-green');
             gameTimer(leftTime);
         }
     });
+
+    timerRadio.forEach((item, i) => {
+        item.addEventListener('click',()=>{
+            timersetidksal();
+        });
+    });
+
+    function timersetidksal(){
+        timerRadio.forEach((item, i) => {
+            if (item.checked) {
+                setTime(i);
+            }
+        });
+    }
 
     timerResetButton.addEventListener('click', () => {
         changeClass(timerBox, 'border-green', 'border-red');
@@ -203,6 +216,7 @@ window.addEventListener("DOMContentLoaded", () => {
         switch (i) {
             case 0:
                 leftTime = 10;
+                //timerText[0].innerHTML = leftTime;
                 break;
             case 1:
                 leftTime = 30;
@@ -234,14 +248,13 @@ window.addEventListener("DOMContentLoaded", () => {
                     label: 'Amount',
                     //data: [pawns, bishops, knights, rooks, queens, kings],
                     data: [pawns, 3, 2, 1, 5, kings],
-                    backgroundColor: ['red', 'orange','yellow','green', 'blue', 'purple']
+                    backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
                 }]
             },
             options: {
-                    
             }
         });
-
+       
 
 
     }
