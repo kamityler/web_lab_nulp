@@ -237,7 +237,12 @@ window.addEventListener("DOMContentLoaded", () => {
                     backgroundColor: ['red', 'orange','yellow','green', 'blue', 'purple']
                 }]
             },
-            options: {}
+            options: {
+                    
+            }
         });
+
+
+
     }
 });
