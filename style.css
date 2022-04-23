@@ -114,34 +114,55 @@ img {
     margin: 2%;
 }
 
-.chart-container{
+.chart-container {
     border: solid 1px red;
     background-color: grey;
-    float:left;
+    float: left;
     color: wheat;
 }
 
-.radius-border{
+.radius-border {
     border-radius: 20px;
 }
 
-.reject-button{
-    color:antiquewhite;
+.reject-button {
+    color: antiquewhite;
     border: none;
-    background-color: red;
+    background-color: rgb(172, 8, 8);
     border-radius: 5px;
-    width: 80px;
-    height:25px;
-    
+    width: 48%;
+    height: 25px;
+    transition-duration: 0.4s;
+    box-shadow: 0 5px rgb(153, 153, 153);
 }
 
-.accept-button{
-    color:antiquewhite;
-    border: none;
-    background-color: green;
-    border-radius: 5px;
-    width: 80px;
-    height:25px;
+.reject-button:hover {
+    background-color: rgb(231, 8, 8);
 }
 
+.reject-button:active {
+    background-color: rgb(142, 62, 65);
+    box-shadow: 0 2px rgb(102, 102, 102);
+    transform: translateY(3px);
+}
 
+.accept-button {
+    color: antiquewhite;
+    border: none;
+    background-color: rgb(8, 172, 8);
+    border-radius: 5px;
+    width: 48%;
+    height: 25px;
+    transition-duration: 0.2s;
+    box-shadow: 0 5px rgb(153, 153, 153);
+}
+
+.accept-button:hover {
+    background-color: rgb(6, 231, 8);
+}
+
+.accept-button:active {
+    background-color: rgb(62, 142, 65);
+    box-shadow: 0 2px rgb(102, 102, 102);
+    transform: translateY(3px);
+}
