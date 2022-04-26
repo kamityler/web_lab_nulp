@@ -94,10 +94,10 @@ window.addEventListener("DOMContentLoaded", () => {
             });
             if (!flag) {
                 document.querySelector("#checkbox-error").innerHTML = `Оберіть режим гри!!!`;
-
+                document.querySelector("#button-submit").setAttribute('disabled', 'disabled');
             } else {
                 document.querySelector("#checkbox-error").innerHTML = ``;
-
+                document.querySelector("#button-submit").removeAttribute('disabled');
             }
         });
 
@@ -105,6 +105,8 @@ window.addEventListener("DOMContentLoaded", () => {
             item.addEventListener('click', () => {
                 if (item.checked) {
                     document.querySelector("#checkbox-error").innerHTML = ``;
+                    document.querySelector("#button-submit").removeAttribute('disabled');
+
                 }
             });
 
@@ -136,7 +138,6 @@ window.addEventListener("DOMContentLoaded", () => {
             hiddenInput.value = `${cDay}-${cMonth}-${cYear}`;
 
             const userMode = document.querySelectorAll(".user-mode-checkbox");
-            //document.querySelector("form").submit();
         });
     }
 
