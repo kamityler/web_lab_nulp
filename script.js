@@ -106,13 +106,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 if (item.checked) {
                     document.querySelector("#checkbox-error").innerHTML = ``;
                     document.querySelector("#button-submit").removeAttribute('disabled');
-
                 }
             });
-
-
         });
-
     }
 
     //reset button
